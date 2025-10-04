@@ -19,7 +19,7 @@
             android:layout_height="80dp"
             android:layout_gravity="center"
             android:layout_marginBottom="32dp"
-            android:src="@drawable/ic_logo"
+            android:src="@drawable/ic_logo_brand"
             android:contentDescription="App Logo" />
 
         <!-- Username Input -->
