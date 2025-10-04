@@ -3,6 +3,7 @@ package com.example.myapplication;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class ProfileActivity extends AppCompatActivity {
 
     private TextView btnBack;
+    private ImageButton btnSettings;
     private TextView tvProfileName;
     private TextView tvFriendsCount;
     private TextView tvFollowersCount;
@@ -25,6 +27,7 @@ public class ProfileActivity extends AppCompatActivity {
 
         // Khởi tạo views
         btnBack = findViewById(R.id.btnBack);
+        btnSettings = findViewById(R.id.btnSettings);
         tvProfileName = findViewById(R.id.tvProfileName);
         tvFriendsCount = findViewById(R.id.tvFriendsCount);
         tvFollowersCount = findViewById(R.id.tvFollowersCount);
@@ -42,7 +45,6 @@ public class ProfileActivity extends AppCompatActivity {
             tvProfileName.setText(username);
         }
 
-        // Set dữ liệu mẫu (có thể thay bằng dữ liệu thực)
         tvFriendsCount.setText("125");
         tvFollowersCount.setText("250");
         tvEmail.setText("mail@email.com");
@@ -50,11 +52,20 @@ public class ProfileActivity extends AppCompatActivity {
         tvSkype.setText("me007");
         tvWeb.setText("scsauthor.com/");
 
-        // Xử lý sự kiện nút Back
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Quay lại màn hình Login
+                finish();
+            }
+        });
+
+        btnSettings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ProfileActivity.this, LoginActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
                 finish();
             }
         });
