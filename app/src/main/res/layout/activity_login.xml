@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4A90C8"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:padding="32dp"
+        android:elevation="4dp">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="32dp"
+            android:src="@drawable/ic_logo"
+            android:contentDescription="App Logo" />
+
+        <!-- Username Input -->
+        <EditText
+            android:id="@+id/etUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="User Name"
+            android:inputType="text"
+            android:padding="16dp"
+            android:background="@drawable/edittext_border"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Password Input -->
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="16dp"
+            android:background="@drawable/edittext_border"
+            android:layout_marginBottom="24dp" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LOGIN ME"
+            android:textColor="@android:color/white"
+            android:background="#4A90C8"
+            android:padding="16dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Lost Password Link -->
+        <TextView
+            android:id="@+id/tvLostPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🔑 Lost password ?"
+            android:textColor="#4A90C8"
+            android:layout_gravity="center"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>
